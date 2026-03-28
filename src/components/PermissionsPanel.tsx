@@ -90,7 +90,7 @@ export default function PermissionsPanel({ role, ecoleId, userId }: Props) {
     setLoading(false);
   };
 
-  const handleDecision = async (id: string, status: "approuvee" | "refusee") => {
+  const handleDecision = async (id: string, status: "approuve" | "refuse") => {
     const { error } = await supabase.from("demandes_permission_monecole2")
       .update({ status, traite_par_id: userId })
       .eq("id", id);

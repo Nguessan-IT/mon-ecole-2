@@ -43,7 +43,7 @@ export default function Dashboard({ session }: { session: Session | null }) {
       const { data, error } = await supabase
         .from("utilisateurs_ecole_monecole2")
         .select("*")
-        .eq("auth_id", session!.user.id)
+        .eq("user_id", session!.user.id)
         .maybeSingle();
 
       if (error) throw error;
