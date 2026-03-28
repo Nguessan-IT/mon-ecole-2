@@ -56,8 +56,8 @@ export default function AuthPage() {
 
           if (ecole) {
             await supabase.from("utilisateurs_ecole_monecole2").insert({
-              auth_id: data.user.id, nom: form.nom, prenom: form.prenom,
-              type_utilisateur: "direction", ecole_id: ecole.id, email: form.email, statut: "actif",
+              user_id: data.user.id, nom: form.nom, prenom: form.prenom,
+              type_utilisateur: "direction" as any, ecole_id: ecole.id, email: form.email,
             });
           }
         } else if (data.user) {
