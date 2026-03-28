@@ -72,7 +72,7 @@ export default function PermissionsPanel({ role, ecoleId, userId }: Props) {
       }
       if (isSecretariat) {
         // Secretariat sees approved copies
-        filtered = data.filter((d: any) => d.status === "approuvee");
+        filtered = data.filter((d: any) => d.status === "approuve");
       }
       setDemandes(filtered);
     }
