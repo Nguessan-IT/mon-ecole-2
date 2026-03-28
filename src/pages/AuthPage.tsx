@@ -63,8 +63,8 @@ export default function AuthPage() {
         } else if (data.user) {
           // For other roles, try to find school or create user record
           await supabase.from("utilisateurs_ecole_monecole2").insert({
-            auth_id: data.user.id, nom: form.nom, prenom: form.prenom,
-            type_utilisateur: form.role as any, email: form.email, statut: "actif",
+            user_id: data.user.id, nom: form.nom, prenom: form.prenom,
+            type_utilisateur: form.role as any, email: form.email,
           });
         }
         toast.success("Inscription réussie ! Vérifiez votre email.");
