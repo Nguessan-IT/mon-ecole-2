@@ -101,8 +101,8 @@ export default function PermissionsPanel({ role, ecoleId, userId }: Props) {
   const statusBadge = (status: string) => {
     const map: Record<string, { label: string; variant: "default" | "secondary" | "destructive" }> = {
       en_attente: { label: "En attente", variant: "secondary" },
-      approuvee: { label: "Approuvée", variant: "default" },
-      refusee: { label: "Refusée", variant: "destructive" },
+      approuve: { label: "Approuvée", variant: "default" },
+      refuse: { label: "Refusée", variant: "destructive" },
     };
     const s = map[status] || map.en_attente;
     return <Badge variant={s.variant}>{s.label}</Badge>;
