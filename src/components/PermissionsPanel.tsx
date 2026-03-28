@@ -189,10 +189,10 @@ export default function PermissionsPanel({ role, ecoleId, userId }: Props) {
                     {canApprove && d.status === "en_attente" && (
                       <TableCell>
                         <div className="flex gap-2">
-                          <Button size="sm" onClick={() => handleDecision(d.id, "approuvee")} className="bg-green-600 hover:bg-green-700 text-white">
+                          <Button size="sm" onClick={() => handleDecision(d.id, "approuve")} className="gradient-primary text-primary-foreground">
                             <Check className="h-4 w-4" />
                           </Button>
-                          <Button size="sm" variant="destructive" onClick={() => handleDecision(d.id, "refusee")}>
+                          <Button size="sm" variant="destructive" onClick={() => handleDecision(d.id, "refuse")}>
                             <X className="h-4 w-4" />
                           </Button>
                         </div>
