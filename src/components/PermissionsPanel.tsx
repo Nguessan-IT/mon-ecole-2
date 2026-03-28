@@ -95,7 +95,7 @@ export default function PermissionsPanel({ role, ecoleId, userId }: Props) {
       .update({ status, traite_par_id: userId })
       .eq("id", id);
     if (error) toast.error("Erreur: " + error.message);
-    else { toast.success(`Demande ${status === "approuvee" ? "approuvée" : "refusée"}`); loadDemandes(); }
+    else { toast.success(`Demande ${status === "approuve" ? "approuvée" : "refusée"}`); loadDemandes(); }
   };
 
   const statusBadge = (status: string) => {
