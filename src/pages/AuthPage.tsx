@@ -44,7 +44,7 @@ export default function AuthPage() {
       } else {
         const { data, error } = await supabase.auth.signUp({
           email: form.email, password: form.password,
-          options: { data: { nom: form.nom, prenom: form.prenom, type_utilisateur: form.role, ecole_nom: form.ecole_nom, app_context: "mon_ecole" } },
+          options: { data: { nom: form.nom, prenom: form.prenom, role: form.role, ecole_nom: form.ecole_nom } },
         });
         if (error) throw error;
 
